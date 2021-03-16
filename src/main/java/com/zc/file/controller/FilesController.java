@@ -38,7 +38,7 @@ public class FilesController {
             jsonObject.put("msg", "文件上传失败！");
             return jsonObject;
         }
-        //文件名等于当前时间到毫秒+原来的文件名
+        //文件名等于uuid+后缀名
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
         String format = simpleDateFormat.format(new Date());
         UUID uuid = UUID.randomUUID();
